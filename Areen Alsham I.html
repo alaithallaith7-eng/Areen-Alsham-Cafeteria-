@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو عرين الشام الملكي | AREEN ALSHAM</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@400;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --royal-gold: #D4AF37;
+            --soft-gold: #f1d592;
+            --deep-black: #080808;
+            --card-bg: #121212;
+            --wa-green: #25D366;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            background-color: var(--deep-black);
+            color: #ffffff;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding-bottom: 120px;
+            line-height: 1.6;
+        }
+
+        /* Hero Header */
+        header {
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid var(--royal-gold);
+            text-align: center;
+        }
+
+        .logo-title {
+            font-family: 'Amiri', serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            color: var(--royal-gold);
+            margin: 0;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .eng-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            color: #fff;
+            margin-top: 5px;
+        }
+
+        /* Container & Categories */
+        .container { max-width: 1000px; margin: -40px auto 0; padding: 0 15px; }
+
+        .section-box {
+            background: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+        .section-header {
+            font-family: 'Amiri', serif;
+            color: var(--royal-gold);
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .section-header::after, .section-header::before {
+            content: ""; height: 1px; width: 40px; background: var(--royal-gold);
+        }
+
+        /* Menu Items */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+
+        .item:hover { transform: scale(1.02); background: rgba(212, 175, 55, 0.05); border-radius: 10px; }
+
+        .item-info .ar { display: block; font-weight: 700; font-size: 1.1rem; color: #fff; }
+        .item-info .en { display: block; font-size: 0.8rem; color: #888; font-style: italic; }
+
+        .price {
+            font-weight: 700;
+            color: var(--royal-gold);
+            font-size: 1.2rem;
+            border-right: 2px solid var(--royal-gold);
+            padding-right: 12px;
+        }
+
+        /* Floating Buttons */
+        .action-bar {
+            position: fixed;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
+
+        .btn-wa { background: var(--wa-green); color: white; }
+        .btn-call { background: var(--royal-gold); color: black; }
+
+        /* Footer & Copyrights */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #000;
+            border-top: 1px solid var(--royal-gold);
+            margin-top: 50px;
+        }
+
+        .dev-tag {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--soft-gold);
+            letter-spacing: 1px;
+        }
+
+        .dev-tag i { color: #ff4d4d; }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div data-aos="zoom-in">
+        <h1 class="logo-title">عـريـن الـشـام</h1>
+        <div class="eng-title">AREEN ALSHAM</div>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="section-box" data-aos="fade-up">
+        <h2 class="section-header">الشاورما | Shawarma</h2>
+        <div class="menu-grid">
+            <div class="item"><div class="item-info"><span class="ar">خبز لبناني</span><span class="en">Lebanese bread</span></div><div class="price">5</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صاج شاورما صغير</span><span class="en">Saj Shawarma S</span></div><div class="price">6</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صاج شاورما كبير</span><span class="en">Saj Shawarma L</span></div><div class="price">10</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صاج صغير مع جبنة</span><span class="en">Saj with cheese S</span></div><div class="price">7</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صاج كبير مع جبنة</span><span class="en">Saj with cheese L</span></div><div class="price">14</div></div>
+            <div class="item"><div class="item-info"><span class="ar">وجبة عربي</span><span class="en">Arabic Meal</span></div><div class="price">18</div></div>
+            <div class="item"><div class="item-info"><span class="ar">وجبة عربي سوبر</span><span class="en">Super Arabic Meal</span></div><div class="price">22</div></div>
+            <div class="item"><div class="item-info"><span class="ar">وجبة عربي دبل</span><span class="en">Double Arabic</span></div><div class="price">30</div></div>
+            <div class="item"><div class="item-info"><span class="ar">وجبة شاميات</span><span class="en">Shawarma Shamiyat</span></div><div class="price">22</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صحن شاورما</span><span class="en">Shawarma plate</span></div><div class="price">25</div></div>
+            <div class="item"><div class="item-info"><span class="ar">شاورما بحمص</span><span class="en">Hummus shawarma</span></div><div class="price">30</div></div>
+            <div class="item"><div class="item-info"><span class="ar">نصف كيلو شاورما</span><span class="en">1/2 kilo Shawarma</span></div><div class="price">60</div></div>
+            <div class="item"><div class="item-info"><span class="ar">كيلو شاورما</span><span class="en">1 kilo Shawarma</span></div><div class="price">100</div></div>
+        </div>
+    </section>
+
+    <section class="section-box" data-aos="fade-up" style="border-color: #ff4d4d;">
+        <h2 class="section-header" style="color: #ff4d4d;">قسم الفروج | Grilled Chicken</h2>
+        <div class="menu-grid">
+            <div class="item"><div class="item-info"><span class="ar">فروج ماكينة كامل</span><span class="en">Whole Grilled chicken</span></div><div class="price">40</div></div>
+            <div class="item"><div class="item-info"><span class="ar">نصف فروج ماكينة</span><span class="en">Half Grilled chicken</span></div><div class="price">22</div></div>
+        </div>
+    </section>
+
+    <section class="section-box" data-aos="fade-up">
+        <h2 class="section-header">الأطباق الرئيسية | Dishes</h2>
+        <div class="menu-grid">
+            <div class="item"><div class="item-info"><span class="ar">فول</span><span class="en">Foul Plate</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">مسبحة</span><span class="en">Musabah Plate</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">شكشوكة</span><span class="en">Shakshuka Plate</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">حمص باللحم</span><span class="en">Hummus with Meat</span></div><div class="price">25</div></div>
+            <div class="item"><div class="item-info"><span class="ar">فتة شاورما</span><span class="en">Shawarma Fatteh</span></div><div class="price">25</div></div>
+            <div class="item"><div class="item-info"><span class="ar">فتة حمص</span><span class="en">Hummus Fatteh</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صحن كبدة</span><span class="en">Liver Plate</span></div><div class="price">23</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صحن فاهيتا</span><span class="en">Fajita Plate</span></div><div class="price">29</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صحن طاووق</span><span class="en">Tawok Plate</span></div><div class="price">25</div></div>
+            <div class="item"><div class="item-info"><span class="ar">فرانسيسكو</span><span class="en">Francisco Plate</span></div><div class="price">29</div></div>
+            <div class="item"><div class="item-info"><span class="ar">لحم بطاطا</span><span class="en">Meat & Potato</span></div><div class="price">23</div></div>
+            <div class="item"><div class="item-info"><span class="ar">قلاية بندورة</span><span class="en">Tomato fryer</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">بندورة باللحمة</span><span class="en">Tomato Meat</span></div><div class="price">23</div></div>
+            <div class="item"><div class="item-info"><span class="ar">بطاطا مع بيض</span><span class="en">Potato and Egg</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">فلافل (12 حبة)</span><span class="en">Falafel (12 pieces)</span></div><div class="price">8</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صحن مقالي</span><span class="en">Fried vegetables</span></div><div class="price">10</div></div>
+            <div class="item"><div class="item-info"><span class="ar">بطاطا كبير</span><span class="en">Large potato dish</span></div><div class="price">12</div></div>
+            <div class="item"><div class="item-info"><span class="ar">بطاطا صغير</span><span class="en">Small potato dish</span></div><div class="price">7</div></div>
+            <div class="item"><div class="item-info"><span class="ar">صحن ثوم</span><span class="en">Garlic dish</span></div><div class="price">5</div></div>
+        </div>
+    </section>
+
+    <section class="section-box" data-aos="fade-up">
+        <h2 class="section-header">الساندويشات | Sandwiches</h2>
+        <div class="menu-grid">
+            <div class="item"><div class="item-info"><span class="ar">فلافل</span><span class="en">Falafel</span></div><div class="price">4</div></div>
+            <div class="item"><div class="item-info"><span class="ar">فلافل مشكلة</span><span class="en">Mixed Falafel</span></div><div class="price">5</div></div>
+            <div class="item"><div class="item-info"><span class="ar">لبنة</span><span class="en">Labneh</span></div><div class="price">5</div></div>
+            <div class="item"><div class="item-info"><span class="ar">كبدة دجاج</span><span class="en">Chicken Liver</span></div><div class="price">10</div></div>
+            <div class="item"><div class="item-info"><span class="ar">فرانسيسكو</span><span class="en">Francisco</span></div><div class="price">12</div></div>
+            <div class="item"><div class="item-info"><span class="ar">فاهيتا دجاج</span><span class="en">Chicken Fajita</span></div><div class="price">12</div></div>
+            <div class="item"><div class="item-info"><span class="ar">لحم بطاطا</span><span class="en">Meat and Potato</span></div><div class="price">10</div></div>
+            <div class="item"><div class="item-info"><span class="ar">لحم ناشف</span><span class="en">Dried meat</span></div><div class="price">10</div></div>
+            <div class="item"><div class="item-info"><span class="ar">طاووق</span><span class="en">Tawok</span></div><div class="price">10</div></div>
+            <div class="item"><div class="item-info"><span class="ar">دجاج مسحب</span><span class="en">Boneless chicken</span></div><div class="price">10</div></div>
+            <div class="item"><div class="item-info"><span class="ar">دجاج خضار</span><span class="en">Vegetable Chicken</span></div><div class="price">10</div></div>
+            <div class="item"><div class="item-info"><span class="ar">بطاطا</span><span class="en">Potatoes</span></div><div class="price">7</div></div>
+            <div class="item"><div class="item-info"><span class="ar">حمص باللحمة</span><span class="en">Hummus & Meat</span></div><div class="price">10</div></div>
+            <div class="item"><div class="item-info"><span class="ar">حلوم</span><span class="en">Halloumi</span></div><div class="price">12</div></div>
+            <div class="item"><div class="item-info"><span class="ar">3 حبات فلافل</span><span class="en">3 pieces Falafel</span></div><div class="price">1</div></div>
+        </div>
+    </section>
+
+    <section class="section-box" data-aos="fade-up">
+        <h2 class="section-header">البوكسات والعروض | Boxes</h2>
+        <div class="menu-grid">
+            <div class="item"><div class="item-info"><span class="ar">بوكس فلافل وشاورما</span><span class="en">Falafel & Shawarma box</span></div><div class="price">50</div></div>
+            <div class="item"><div class="item-info"><span class="ar">بوكس لحم مشكل</span><span class="en">Mixed Meat box</span></div><div class="price">60</div></div>
+            <div class="item"><div class="item-info"><span class="ar">بوكس فلافل مقالي</span><span class="en">Fried & Falafel box</span></div><div class="price">40</div></div>
+            <div class="item"><div class="item-info"><span class="ar">بوكس الإفطار</span><span class="en">Breakfast box</span></div><div class="price">60</div></div>
+            <div class="item"><div class="item-info"><span class="ar">وجبة شاورما (4 أشخاص)</span><span class="en">Shawarma (4 People)</span></div><div class="price">50</div></div>
+            <div class="item"><div class="item-info"><span class="ar">وجبة شاورما (6 أشخاص)</span><span class="en">Shawarma (6 People)</span></div><div class="price">70</div></div>
+        </div>
+    </section>
+
+    <section class="section-box" data-aos="fade-up">
+        <h2 class="section-header">المقبلات والسلطات | Sides</h2>
+        <div class="menu-grid">
+            <div class="item"><div class="item-info"><span class="ar">حمص</span><span class="en">Hummus</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">متبل</span><span class="en">Mutabbal</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">بابا غنوج</span><span class="en">Baba Ghanoush</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">تبولة</span><span class="en">Tabbouleh</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">فتوش</span><span class="en">Fattoush</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">سلطة عربية</span><span class="en">Arab Salad</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">سلطة جرجير</span><span class="en">Arugula Salad</span></div><div class="price">15</div></div>
+            <div class="item"><div class="item-info"><span class="ar">سلطة سيزر</span><span class="en">Caesar Salad</span></div><div class="price">20</div></div>
+        </div>
+    </section>
+
+    <section class="section-box" data-aos="fade-up">
+        <h2 class="section-header">المشروبات | Drinks</h2>
+        <div class="menu-grid">
+            <div class="item"><div class="item-info"><span class="ar">ماء</span><span class="en">Water</span></div><div class="price">2</div></div>
+            <div class="item"><div class="item-info"><span class="ar">مشروبات غازية</span><span class="en">Soft drink</span></div><div class="price">4</div></div>
+        </div>
+    </section>
+
+</div>
+
+<div class="action-bar">
+    <a href="https://wa.me/971566648585" class="btn btn-wa"><i class="fab fa-whatsapp"></i> واتساب</a>
+    <a href="tel:026222209" class="btn btn-call"><i class="fas fa-phone"></i> اتصل بنا</a>
+</div>
+
+<footer>
+    <div style="color: var(--royal-gold); font-family: 'Amiri', serif; font-size: 1.8rem;">عرين الشام</div>
+    <p>أبوظبي - الخالدية 2 - خلف الأبراج الساطعة</p>
+    <div class="dev-tag">
+        جميع الحقوق محفوظة &copy; 2026 | تم التطوير بواسطة <b>ليث الشحادات</b> <i class="fas fa-code"></i>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+</script>
+
+</body>
+</html>
