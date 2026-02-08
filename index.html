@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو عرين الشام - Areen Alsham Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #d4af37;
+            --dark-bg: #1a1a1a;
+            --green-accent: #2e7d32;
+            --text-light: #f4f4f4;
+            --border-color: #333;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1200x400'); /* يمكن وضع صورة خلفية للمطعم */
+            border-bottom: 3px solid var(--primary-gold);
+        }
+
+        .logo-text {
+            color: var(--green-accent);
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .tagline {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .menu-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            color: var(--primary-gold);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #444;
+        }
+
+        .item-info {
+            flex-grow: 1;
+        }
+
+        .item-name-ar {
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .item-name-en {
+            font-size: 0.9rem;
+            color: #aaa;
+            display: block;
+        }
+
+        .item-price {
+            color: var(--primary-gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            min-width: 60px;
+            text-align: left;
+        }
+
+        .price-unit {
+            font-size: 0.8rem;
+            margin-right: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background-color: #111;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .logo-text { font-size: 2rem; }
+            .menu-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="logo-text">عرين الشام</h1>
+    <p class="tagline">حين يلتقي الكرم الدمشقي مع الطعم الأصيل</p>
+    <div class="contact-info">
+        أبوظبي - الخالدية 2 خلف الأبراج الساطعة <br>
+        📞 026222209 | 0566648585
+    </div>
+</header>
+
+<div class="container">
+    
+    <section class="menu-section">
+        <h2 class="section-title">الشاورما | Shawarma</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">خبز لبناني</span>
+                    <span class="item-name-en">Lebanese bread</span>
+                </div>
+                <div class="item-price">5 <span class="price-unit">AED</span></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">وجبة عربي سوبر</span>
+                    <span class="item-name-en">Super Arabic Meal</span>
+                </div>
+                <div class="item-price">22 <span class="price-unit">AED</span></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">كيلو شاورما</span>
+                    <span class="item-name-en">1 Kilo Shawarma</span>
+                </div>
+                <div class="item-price">100 <span class="price-unit">AED</span></div>
+            </div>
+            </div>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="section-title">الأطباق | Dishes</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">حمص باللحم</span>
+                    <span class="item-name-en">Hummus with Meat</span>
+                </div>
+                <div class="item-price">25 <span class="price-unit">AED</span></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">شكشوكة</span>
+                    <span class="item-name-en">Shakshuka Plate</span>
+                </div>
+                <div class="item-price">15 <span class="price-unit">AED</span></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">صحن كبدة</span>
+                    <span class="item-name-en">Liver Plate</span>
+                </div>
+                <div class="item-price">23 <span class="price-unit">AED</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="section-title">البوكسات | Boxes</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">بوكس الإفطار</span>
+                    <span class="item-name-en">Breakfast Box</span>
+                </div>
+                <div class="item-price">60 <span class="price-unit">AED</span></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">لحم مشكل</span>
+                    <span class="item-name-en">Mixed Meat Box</span>
+                </div>
+                <div class="item-price">60 <span class="price-unit">AED</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="section-title">المقبلات | Appetizers</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">تبولة</span>
+                    <span class="item-name-en">Tabbouleh</span>
+                </div>
+                <div class="item-price">15 <span class="price-unit">AED</span></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name-ar">سلطة سيزر</span>
+                    <span class="item-name-en">Caesar Salad</span>
+                </div>
+                <div class="item-price">20 <span class="price-unit">AED</span></div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2026 عرين الشام - جميع الحقوق محفوظة <br>
+    AREEN ALSHAM - L.L.C S.P.C
+</footer>
+
+</body>
+</html>
